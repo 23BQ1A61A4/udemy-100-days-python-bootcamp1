@@ -20,11 +20,13 @@ ____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
 /______/______/______/______/______/______/______/______/______/______/_____ /
 *******************************************************************************
 ''')
+#playing tresssure Island game and our mission is to find out the tressure
+#ask for left or right when you are at cross road, that is taken as choice 1
 print("Welcome to Treasure Island.")
 print("Your mission is to find the treasure.")
 choice1 = input('You\'re at a crossroad, where do you want to go? '
                 'Type "left" or "right".\n').lower()
-
+#if you have choosen right the game is over, if you  left , you reached the lake, then ask for swim or wait for a boat. If the user choose to swim then the game is over, if the player waits for boat then  the player reached the island unharmed
 if choice1 == "left":
     choice2 = input('You\'ve come to a lake. '
                     'There is an island in the middle of the lake. '
@@ -35,6 +37,7 @@ if choice1 == "left":
                         "There is house with 3 doors. One red, "
                         "one yellow and one blue. "
                         "Which colour do you choose?\n").lower()
+#given three colors to choose red means room full of fire, yellow means treasure and blue means room of beasts
         if choice3 == "red":
             print("It's a room full of fire. Game Over")
         elif choice3 == "yellow":
@@ -45,6 +48,6 @@ if choice1 == "left":
             print("You chose a door that doesn't exist. Game Over.")
     else:
         print("You got attacked by an angry trout. Game Over.")
-
+#If you fell into hole or attacked by the angru trout the game is over
 else:
     print("You fell in to a hole. Game Over.")
